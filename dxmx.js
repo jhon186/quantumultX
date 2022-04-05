@@ -1,8 +1,16 @@
 /*
 大象冥想 解锁VIP&付费音乐
-^https?:\/\/nmeditation\.snailsleep\.net\/meditation-(audio|user|order|audio)\/(api|user)\/(audio\/master\/detail|get\/info|order/user\/vip\/info|ad\/get) url script-response-body https://raw.githubusercontent.com/photonmang/quantumultX/master/dxmx.js
-MITM = nmeditation.snailsleep.net
-*/
+
+***************************
+Quantumult X:
+
+[rewrite_local]
+^https?:\/\/nmeditation\.snailsleep\.net\/meditation-(audio|user|order|audio)\/(api|user)\/(audio\/master\/detail|get\/info|order/user\/vip\/info|ad\/get) url script-response-body https://raw.githubusercontent.com/jhon186/quantumultX/master/dxmx.js
+
+[mitm]
+hostname = nmeditation.snailsleep.net
+
+***************************/
 
 
 re('"free":false@"vip":\\w+@"expires":\\d+@"isVip":\\w+','"free":true@"vip":ture@"expires":9999999999000@"isVip":true')
